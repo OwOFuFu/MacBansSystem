@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="MacBans_1_13_1_R1" />
+        <module name="MacBans_1_16_R1" />
+        <module name="MacBans_1_17_R1" />
+        <module name="MacBans_1_18_R1" />
+        <module name="MacBans-paper" />
+        <module name="MacBans-bungeecord" />
+        <module name="MacBans_1_12_1_R1" />
+        <module name="MacBans_1_14_1_R1" />
+        <module name="MacBans_1_14_4_R1" />
+        <module name="MacBans_1_14_2_R1" />
+        <module name="MacBans_1_14_3_R1" />
+        <module name="MacBans_1_12_2_R1" />
+        <module name="MacBans-common" />
+        <module name="MacBans_1_14_R1" />
+        <module name="MacBans_1_15_R1" />
+        <module name="MacBans_1_12_R1" />
+        <module name="MacBans_1_13_R1" />
+        <module name="MacBans_1_13_2_R1" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MacBans" target="1.5" />
+      <module name="MacBans-bungeecord" target="1.8" />
+      <module name="MacBans-common" target="1.8" />
+      <module name="MacBans-paper" target="1.8" />
+      <module name="MacBans_1_12_1_R1" target="1.8" />
+      <module name="MacBans_1_12_2_R1" target="1.8" />
+      <module name="MacBans_1_12_R1" target="1.8" />
+      <module name="MacBans_1_13_1_R1" target="1.8" />
+      <module name="MacBans_1_13_2_R1" target="1.8" />
+      <module name="MacBans_1_13_R1" target="1.8" />
+      <module name="MacBans_1_14_1_R1" target="1.8" />
+      <module name="MacBans_1_14_2_R1" target="1.8" />
+      <module name="MacBans_1_14_3_R1" target="1.8" />
+      <module name="MacBans_1_14_4_R1" target="1.8" />
+      <module name="MacBans_1_14_R1" target="1.8" />
+      <module name="MacBans_1_15_R1" target="1.8" />
+      <module name="MacBans_1_16_R1" target="1.8" />
+      <module name="MacBans_1_17_R1" target="1.8" />
+      <module name="MacBans_1_18_R1" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

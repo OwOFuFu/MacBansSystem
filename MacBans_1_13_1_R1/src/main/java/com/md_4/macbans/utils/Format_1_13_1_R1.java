@@ -1,0 +1,11 @@
+package com.md_4.macbans.utils;
+
+import org.bukkit.ChatColor;
+
+public class Format_1_13_1_R1 {
+
+    public static String color(String s){
+        return ChatColor.translateAlternateColorCodes('&', s);
+    }
+
+}

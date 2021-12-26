@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MacBans.iml" filepath="$PROJECT_DIR$/MacBans.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans-bungeecord/MacBans-bungeecord.iml" filepath="$PROJECT_DIR$/MacBans-bungeecord/MacBans-bungeecord.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans-common/MacBans-common.iml" filepath="$PROJECT_DIR$/MacBans-common/MacBans-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans-paper/MacBans-paper.iml" filepath="$PROJECT_DIR$/MacBans-paper/MacBans-paper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_12_1_R1/MacBans_1_12_1_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_12_1_R1/MacBans_1_12_1_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_12_2_R1/MacBans_1_12_2_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_12_2_R1/MacBans_1_12_2_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_8_R1/MacBans_1_12_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_8_R1/MacBans_1_12_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_13_1_R1/MacBans_1_13_1_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_13_1_R1/MacBans_1_13_1_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_13_2_R1/MacBans_1_13_2_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_13_2_R1/MacBans_1_13_2_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_13_R1/MacBans_1_13_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_13_R1/MacBans_1_13_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_14_1_R1/MacBans_1_14_1_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_14_1_R1/MacBans_1_14_1_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_14_2_R1/MacBans_1_14_2_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_14_2_R1/MacBans_1_14_2_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_14_3_R1/MacBans_1_14_3_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_14_3_R1/MacBans_1_14_3_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_14_4_R1/MacBans_1_14_4_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_14_4_R1/MacBans_1_14_4_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_14_R1/MacBans_1_14_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_14_R1/MacBans_1_14_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_15_R1/MacBans_1_15_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_15_R1/MacBans_1_15_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_16_R1/MacBans_1_16_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_16_R1/MacBans_1_16_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_17_R1/MacBans_1_17_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_17_R1/MacBans_1_17_R1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MacBans_1_18_R1/MacBans_1_18_R1.iml" filepath="$PROJECT_DIR$/MacBans_1_18_R1/MacBans_1_18_R1.iml" />
+    </modules>
+  </component>
+</project>

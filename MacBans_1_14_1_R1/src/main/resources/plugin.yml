@@ -1,0 +1,8 @@
+name: MacBans
+version: '${project.version}'
+main: com.md_4.macbans.MacBans_1_14_1_R1
+api-version: 1.14
+authors: [ md_4 ]
+commands:
+  macbans:
+    description: "Main Command"

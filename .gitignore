@@ -1,0 +1,4 @@
+# Project exclude paths
+/MacBans-bungeecord/target/
+/MacBans-common/target/
+/MacBans-paper/target/

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="org.bukkit.event.EventHandler" />
+      <item index="1" class="java.lang.String" itemvalue="net.md_5.bungee.event.EventHandler" />
+    </list>
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_8_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_12_1_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_12_2_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_13_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_13_1_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_13_2_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_14_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_14_1_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_14_2_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_14_3_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_14_4_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_15_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_16_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_17_R1/pom.xml" />
+        <option value="$PROJECT_DIR$/MacBans_1_18_R1/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" default="true" project-jdk-name="corretto-16" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
