@@ -1,6 +1,7 @@
 package com.md_4.macbans.commands;
 
 
+
 import com.md_4.macbans.functions.MacAddress_1_18_R1;
 import com.md_4.macbans.utils.Format_1_18_R1;
 import com.md_4.macbans.utils.GetConfig_1_18_R1;
@@ -13,8 +14,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.sql.Statement;
+import java.util.Set;
 
 import static com.md_4.macbans.MacBans_1_18_R1.SQL;
+import static com.md_4.macbans.events.CheckJoin_1_18_R1.getJoinedPlayers;
 
 @SuppressWarnings("all")
 public class MacBans_1_18_R1 implements CommandExecutor {
@@ -78,7 +81,13 @@ public class MacBans_1_18_R1 implements CommandExecutor {
                                     p.sendMessage(Format_1_18_R1.color(Messages_1_18_R1.getPrefix() + maclocalmsg));
                                 }
                             } else {
-                                sender.sendMessage("");
+                                if(GetConfig_1_18_R1.main().getString("Lang").equals("It")){
+                                    sender.sendMessage(Prefix_1_18_R1.get() + Messages_1_18_R1.ConsoleIsNotAPlayer());
+                                }
+
+                                if(GetConfig_1_18_R1.main().getString("Lang").equals("En")) {
+                                    sender.sendMessage(Prefix_1_18_R1.get() + Messages_1_18_R1.ConsoleIsNotAPlayerEN());
+                                }
                             }
 
 
@@ -325,7 +334,7 @@ public class MacBans_1_18_R1 implements CommandExecutor {
                             } catch (Exception ex){
                                 System.out.println("Error: " + ex.getMessage());
                             }
-                    }
+                        }
 
                     } else {
                         if(GetConfig_1_18_R1.main().getString("Lang").equals("It")){
@@ -377,6 +386,33 @@ public class MacBans_1_18_R1 implements CommandExecutor {
 
                             } catch (Exception ex){
                                 System.out.println("Error: " + ex.getMessage());
+                            }
+                        }
+                    } else {
+                        if(GetConfig_1_18_R1.main().getString("Lang").equals("It")){
+                            p.sendMessage(Format_1_18_R1.color(Prefix_1_18_R1.get() + Messages_1_18_R1.AccessDenied()));
+                        }
+
+                        if(GetConfig_1_18_R1.main().getString("Lang").equals("En")){
+                            p.sendMessage(Format_1_18_R1.color(Prefix_1_18_R1.get() + Messages_1_18_R1.AccessDeniedEN()));
+                        }
+                    }
+                }
+
+                if(args[0].equals("list")){
+                    if(p.hasPermission("MacBans.list")){
+
+
+                        Set keys = getJoinedPlayers.keySet();
+
+                        for(Object key : keys){ // TODO : ADDED MACBANS LIST
+
+                            if(GetConfig_1_18_R1.main().getString("Lang").equals("It")){
+                                p.sendMessage(key.toString() + " : " + getJoinedPlayers.get(key).toString());
+                            }
+
+                            if(GetConfig_1_18_R1.main().getString("Lang").equals("En")){
+                                p.sendMessage(key.toString() + " : " + getJoinedPlayers.get(key).toString());
                             }
                         }
                     } else {

@@ -47,6 +47,9 @@ public class Messages_1_18_R1 {
     public static String DisconnectBanned(){
         return lang.equals("It") ? Format_1_18_R1.color(lang_it_config.getString("Msg.DisconnectBanned")) : "";
     }
+    public static String ConsoleIsNotAPlayer(){
+        return lang.equals("It") ? Format_1_18_R1.color(lang_it_config.getString("Msg.ConsoleIsNotAPlayer")) : "";
+    }
 
     /////////////////////////////////////////////////////////////
 
@@ -80,6 +83,10 @@ public class Messages_1_18_R1 {
 
     public static String DisconnectBannedEN(){
         return lang.equals("En") ? Format_1_18_R1.color(lang_en_config.getString("Msg.DisconnectBanned")) : "";
+    }
+
+    public static String ConsoleIsNotAPlayerEN(){
+        return lang.equals("En") ? Format_1_18_R1.color(lang_en_config.getString("Msg.ConsoleIsNotAPlayer")) : "";
     }
 
 
