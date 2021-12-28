@@ -2,6 +2,7 @@ package com.md_4.macbans;
 
 import com.md_4.macbans.commands.MacBans;
 import com.md_4.macbans.events.CheckJoin;
+import com.md_4.macbans.events.CheckLeft;
 import com.md_4.macbans.functions.MacAddress;
 import com.md_4.macbans.security.AdvancedLicense;
 import com.md_4.macbans.sql.MySQL;
@@ -14,6 +15,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
+
+import static com.md_4.macbans.events.CheckJoin.getJoinedPlayers;
 
 @SuppressWarnings("all")
 public final class MacBans_1_17_R1 extends JavaPlugin {
@@ -36,6 +39,7 @@ public final class MacBans_1_17_R1 extends JavaPlugin {
 
     public void Events(){
         getServer().getPluginManager().registerEvents(new CheckJoin(), this);
+        getServer().getPluginManager().registerEvents(new CheckLeft(), this);
     }
 
 
@@ -93,6 +97,7 @@ public final class MacBans_1_17_R1 extends JavaPlugin {
                 lang_it_config.set("Msg.CommandBanUsage", "&cUsa &4/&cmacbans ban &4<&cNomePlayer&4>&c");
                 lang_it_config.set("Msg.CommandUnbanUsage", "&cUsa &4/&cmacbans unban &4<&cNomePlayer&4>&c");
                 lang_it_config.set("Msg.AccessDenied", "&cAccesso Negato");
+                lang_it_config.set("Msg.ConsoleIsNotAPlayer", "&cLa Console non è un Player non puoi prendere il Mac da &4127.0.0.1");
                 lang_it_config.save(lang_it);
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -111,6 +116,7 @@ public final class MacBans_1_17_R1 extends JavaPlugin {
                 lang_en_config.set("Msg.CommandBanUsage", "&cUse &4/&cmacbans ban &4<&cPlayerName&4>&c");
                 lang_en_config.set("Msg.CommandUnbanUsage", "&cUse &4/&cmacbans unban &4<&cPlayerName&4>&c");
                 lang_en_config.set("Msg.AccessDenied", "&cAccess denied");
+                lang_en_config.set("Msg.ConsoleIsNotAPlayer", "&cConsole Is Not a Player You Cant Get The &4127.0.0.1 &cMac");
                 lang_en_config.save(lang_en);
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -137,6 +143,11 @@ public final class MacBans_1_17_R1 extends JavaPlugin {
             }
         }, 1L);
 
+    }
+
+    public void onDisable() {
+        getJoinedPlayers.clear();
+        SQL.disconnect();
     }
 
 }

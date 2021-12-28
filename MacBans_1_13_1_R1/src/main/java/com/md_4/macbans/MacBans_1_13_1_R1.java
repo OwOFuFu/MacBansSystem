@@ -132,4 +132,8 @@ public final class MacBans_1_13_1_R1 extends JavaPlugin {
         }
     }
 
+    public void onDisable() {
+        SQL.disconnect();
+    }
+
 }

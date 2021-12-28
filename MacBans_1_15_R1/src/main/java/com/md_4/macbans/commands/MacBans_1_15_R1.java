@@ -37,6 +37,8 @@ public class MacBans_1_15_R1 implements CommandExecutor {
                             p.sendMessage(Format_1_15_R1.color("&4#&cBanna per indirizzo mac"));
                             p.sendMessage(Format_1_15_R1.color("&4/&cmacbans unban &4<&cNomePlayer&4>&c"));
                             p.sendMessage(Format_1_15_R1.color("&4#&cUnbanna per indirizzo mac"));
+                            p.sendMessage(Format_1_15_R1.color("&4/&cmacbans list"));
+                            p.sendMessage(Format_1_15_R1.color("&4#&cMostra lista giocatori online + mac"));
                             p.sendMessage(Format_1_15_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                         }
                         if(GetConfig_1_15_R1.main().getString("Lang").equals("En")){
@@ -49,10 +51,18 @@ public class MacBans_1_15_R1 implements CommandExecutor {
                             p.sendMessage(Format_1_15_R1.color("&4#&cBan for mac address"));
                             p.sendMessage(Format_1_15_R1.color("&4/&cmacbans unban &4<&cPlayerName&4>&c"));
                             p.sendMessage(Format_1_15_R1.color("&4#&cUnban for mac address"));
+                            p.sendMessage(Format_1_15_R1.color("&4/&cmacbans list"));
+                            p.sendMessage(Format_1_15_R1.color("&4#&cShow online players list + mac"));
                             p.sendMessage(Format_1_15_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                         }
                     } else {
-                        p.sendMessage(Format_1_15_R1.color(Prefix_1_15_R1.get() + Messages_1_15_R1.AccessDenied()));
+                        if(GetConfig_1_15_R1.main().getString("Lang").equals("It")){
+                            sender.sendMessage(Prefix_1_15_R1.get() + Messages_1_15_R1.ConsoleIsNotAPlayer());
+                        }
+
+                        if(GetConfig_1_15_R1.main().getString("Lang").equals("En")){
+                            sender.sendMessage(Prefix_1_15_R1.get() + Messages_1_15_R1.ConsoleIsNotAPlayerEN());
+                        }
                     }
                 }
                 if(args.length >= 1){
@@ -225,6 +235,8 @@ public class MacBans_1_15_R1 implements CommandExecutor {
                         p.sendMessage(Format_1_15_R1.color("&4#&cBanna per indirizzo mac"));
                         p.sendMessage(Format_1_15_R1.color("&4/&cmacbans unban &4<&cNomePlayer&4>&c"));
                         p.sendMessage(Format_1_15_R1.color("&4#&cUnbanna per indirizzo mac"));
+                        p.sendMessage(Format_1_15_R1.color("&4/&cmacbans list"));
+                        p.sendMessage(Format_1_15_R1.color("&4#&cMostra lista giocatori online + mac"));
                         p.sendMessage(Format_1_15_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                     }
                     if(GetConfig_1_15_R1.main().getString("Lang").equals("En")){
@@ -237,6 +249,8 @@ public class MacBans_1_15_R1 implements CommandExecutor {
                         p.sendMessage(Format_1_15_R1.color("&4#&cBan for mac address"));
                         p.sendMessage(Format_1_15_R1.color("&4/&cmacbans unban &4<&cPlayerName&4>&c"));
                         p.sendMessage(Format_1_15_R1.color("&4#&cUnban for mac address"));
+                        p.sendMessage(Format_1_15_R1.color("&4/&cmacbans list"));
+                        p.sendMessage(Format_1_15_R1.color("&4#&cShow online players list + mac"));
                         p.sendMessage(Format_1_15_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                     }
                 } else {

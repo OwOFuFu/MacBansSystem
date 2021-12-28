@@ -48,6 +48,10 @@ public class Messages_1_8_1_12 {
         return lang.equals("It") ? Format_1_8_1_12.color(lang_it_config.getString("Msg.DisconnectBanned")) : "";
     }
 
+    public static String ConsoleIsNotAPlayer(){
+        return lang.equals("It") ? Format_1_8_1_12.color(lang_it_config.getString("Msg.ConsoleIsNotAPlayer")) : "";
+    }
+
     /////////////////////////////////////////////////////////////
 
     public static String getPrefixEN(){
@@ -80,6 +84,10 @@ public class Messages_1_8_1_12 {
 
     public static String DisconnectBannedEN(){
         return lang.equals("En") ? Format_1_8_1_12.color(lang_en_config.getString("Msg.DisconnectBanned")) : "";
+    }
+
+    public static String ConsoleIsNotAPlayerEN(){
+        return lang.equals("En") ? Format_1_8_1_12.color(lang_en_config.getString("Msg.ConsoleIsNotAPlayer")) : "";
     }
 
 

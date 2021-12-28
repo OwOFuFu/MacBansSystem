@@ -8,14 +8,15 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 import java.util.HashMap;
 
-import static com.md_4.macbans.events.CheckJoin_1_18_R1.getJoinedPlayers;
+import static com.md_4.macbans.events.CheckJoin_1_16_R1.getJoinedPlayers;
 
 
 @SuppressWarnings("all")
-public class CheckLeft_1_18_R1 implements Listener {
+public class CheckLeft_1_16_R1 implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerJoin(PlayerJoinEvent e){
         getJoinedPlayers.remove(e.getPlayer());
     }
 }
+

@@ -17,14 +17,19 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.HashMap;
 
 import static com.md_4.macbans.MacBans_1_17_R1.SQL;
 
 @SuppressWarnings("all")
 public class CheckJoin_1_17_R1 implements Listener {
 
+    public static HashMap<String, String> getJoinedPlayers = new HashMap<>();
+
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerJoin(PlayerJoinEvent e){
+
+        getJoinedPlayers.put(e.getPlayer().getName().toString(), MacAddress_1_17_R1.get(e.getPlayer()));
 
         Bukkit.getScheduler().runTaskLater(MacBans_1_17_R1.getInstance(), new Runnable() {
             public void run() {

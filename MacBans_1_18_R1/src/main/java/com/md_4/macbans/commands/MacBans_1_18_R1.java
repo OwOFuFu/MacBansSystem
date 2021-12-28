@@ -40,6 +40,8 @@ public class MacBans_1_18_R1 implements CommandExecutor {
                             p.sendMessage(Format_1_18_R1.color("&4#&cBanna per indirizzo mac"));
                             p.sendMessage(Format_1_18_R1.color("&4/&cmacbans unban &4<&cNomePlayer&4>&c"));
                             p.sendMessage(Format_1_18_R1.color("&4#&cUnbanna per indirizzo mac"));
+                            p.sendMessage(Format_1_18_R1.color("&4/&cmacbans list"));
+                            p.sendMessage(Format_1_18_R1.color("&4#&cMostra lista giocatori online + mac"));
                             p.sendMessage(Format_1_18_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                         }
                         if(GetConfig_1_18_R1.main().getString("Lang").equals("En")){
@@ -52,6 +54,8 @@ public class MacBans_1_18_R1 implements CommandExecutor {
                             p.sendMessage(Format_1_18_R1.color("&4#&cBan for mac address"));
                             p.sendMessage(Format_1_18_R1.color("&4/&cmacbans unban &4<&cPlayerName&4>&c"));
                             p.sendMessage(Format_1_18_R1.color("&4#&cUnban for mac address"));
+                            p.sendMessage(Format_1_18_R1.color("&4/&cmacbans list"));
+                            p.sendMessage(Format_1_18_R1.color("&4#&cShow online players list + mac"));
                             p.sendMessage(Format_1_18_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                         }
                     } else {
@@ -234,6 +238,8 @@ public class MacBans_1_18_R1 implements CommandExecutor {
                         p.sendMessage(Format_1_18_R1.color("&4#&cBanna per indirizzo mac"));
                         p.sendMessage(Format_1_18_R1.color("&4/&cmacbans unban &4<&cNomePlayer&4>&c"));
                         p.sendMessage(Format_1_18_R1.color("&4#&cUnbanna per indirizzo mac"));
+                        p.sendMessage(Format_1_18_R1.color("&4/&cmacbans list"));
+                        p.sendMessage(Format_1_18_R1.color("&4#&cMostra lista giocatori online + mac"));
                         p.sendMessage(Format_1_18_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                     }
                     if(GetConfig_1_18_R1.main().getString("Lang").equals("En")){
@@ -246,6 +252,8 @@ public class MacBans_1_18_R1 implements CommandExecutor {
                         p.sendMessage(Format_1_18_R1.color("&4#&cBan for mac address"));
                         p.sendMessage(Format_1_18_R1.color("&4/&cmacbans unban &4<&cPlayerName&4>&c"));
                         p.sendMessage(Format_1_18_R1.color("&4#&cUnban for mac address"));
+                        p.sendMessage(Format_1_18_R1.color("&4/&cmacbans list"));
+                        p.sendMessage(Format_1_18_R1.color("&4#&cShow online players list + mac"));
                         p.sendMessage(Format_1_18_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                     }
                 } else {
@@ -408,11 +416,22 @@ public class MacBans_1_18_R1 implements CommandExecutor {
                         for(Object key : keys){ // TODO : ADDED MACBANS LIST
 
                             if(GetConfig_1_18_R1.main().getString("Lang").equals("It")){
-                                p.sendMessage(key.toString() + " : " + getJoinedPlayers.get(key).toString());
+
+                                p.sendMessage(Format_1_18_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
+                                p.sendMessage(Format_1_18_R1.color("&c&lLista Giocatori Online"));
+                                p.sendMessage("");
+                                p.sendMessage(Format_1_18_R1.color("&4" + key.toString() + " &c&l➟ &4" + getJoinedPlayers.get(key).toString() + "\n"));
+                                p.sendMessage(Format_1_18_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
+
+
                             }
 
                             if(GetConfig_1_18_R1.main().getString("Lang").equals("En")){
-                                p.sendMessage(key.toString() + " : " + getJoinedPlayers.get(key).toString());
+                                p.sendMessage(Format_1_18_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
+                                p.sendMessage(Format_1_18_R1.color("&c&lOnline Players List"));
+                                p.sendMessage("");
+                                p.sendMessage(Format_1_18_R1.color("&4" + key.toString() + " &c&l➟ &4" + getJoinedPlayers.get(key).toString() + "\n"));
+                                p.sendMessage(Format_1_18_R1.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                             }
                         }
                     } else {

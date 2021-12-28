@@ -38,6 +38,8 @@ public class MacBans_1_8_1_12 implements CommandExecutor {
                             p.sendMessage(Format_1_8_1_12.color("&4#&cBanna per indirizzo mac"));
                             p.sendMessage(Format_1_8_1_12.color("&4/&cmacbans unban &4<&cNomePlayer&4>&c"));
                             p.sendMessage(Format_1_8_1_12.color("&4#&cUnbanna per indirizzo mac"));
+                            p.sendMessage(Format_1_8_1_12.color("&4/&cmacbans list"));
+                            p.sendMessage(Format_1_8_1_12.color("&4#&cMostra lista giocatori online + mac"));
                             p.sendMessage(Format_1_8_1_12.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                         }
                         if(GetConfig_1_8_1_12.main().getString("Lang").equals("En")){
@@ -50,6 +52,8 @@ public class MacBans_1_8_1_12 implements CommandExecutor {
                             p.sendMessage(Format_1_8_1_12.color("&4#&cBan for mac address"));
                             p.sendMessage(Format_1_8_1_12.color("&4/&cmacbans unban &4<&cPlayerName&4>&c"));
                             p.sendMessage(Format_1_8_1_12.color("&4#&cUnban for mac address"));
+                            p.sendMessage(Format_1_8_1_12.color("&4/&cmacbans list"));
+                            p.sendMessage(Format_1_8_1_12.color("&4#&cShow online players list + mac"));
                             p.sendMessage(Format_1_8_1_12.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                         }
                     } else {
@@ -79,7 +83,13 @@ public class MacBans_1_8_1_12 implements CommandExecutor {
                                     p.sendMessage(Format_1_8_1_12.color(Messages_1_8_1_12.getPrefix() + maclocalmsg));
                                 }
                             } else {
-                                sender.sendMessage("");
+                                if(GetConfig_1_8_1_12.main().getString("Lang").equals("It")){
+                                    sender.sendMessage(Prefix_1_8_1_12.get() + Messages_1_8_1_12.ConsoleIsNotAPlayer());
+                                }
+
+                                if(GetConfig_1_17_R1.main().getString("Lang").equals("En")){
+                                    sender.sendMessage(Prefix_1_8_1_12.get() + Messages_1_8_1_12.ConsoleIsNotAPlayerEN());
+                                }
                             }
 
 

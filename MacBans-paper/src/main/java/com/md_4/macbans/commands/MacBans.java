@@ -13,8 +13,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.sql.Statement;
+import java.util.Set;
 
 import static com.md_4.macbans.MacBans_1_17_R1.SQL;
+import static com.md_4.macbans.events.CheckJoin.getJoinedPlayers;
 
 @SuppressWarnings("all")
 public class MacBans implements CommandExecutor {
@@ -37,6 +39,8 @@ public class MacBans implements CommandExecutor {
                             p.sendMessage(Format.color("&4#&cBanna per indirizzo mac"));
                             p.sendMessage(Format.color("&4/&cmacbans unban &4<&cNomePlayer&4>&c"));
                             p.sendMessage(Format.color("&4#&cUnbanna per indirizzo mac"));
+                            p.sendMessage(Format.color("&4/&cmacbans list"));
+                            p.sendMessage(Format.color("&4#&cMostra lista giocatori online + mac"));
                             p.sendMessage(Format.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                         }
                         if(GetConfig.main().getString("Lang").equals("En")){
@@ -49,6 +53,8 @@ public class MacBans implements CommandExecutor {
                             p.sendMessage(Format.color("&4#&cBan for mac address"));
                             p.sendMessage(Format.color("&4/&cmacbans unban &4<&cPlayerName&4>&c"));
                             p.sendMessage(Format.color("&4#&cUnban for mac address"));
+                            p.sendMessage(Format.color("&4/&cmacbans list"));
+                            p.sendMessage(Format.color("&4#&cShow online players list + mac"));
                             p.sendMessage(Format.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                         }
                     } else {
@@ -78,7 +84,13 @@ public class MacBans implements CommandExecutor {
                                     p.sendMessage(Format.color(Messages.getPrefix() + maclocalmsg));
                                 }
                             } else {
-                                sender.sendMessage("");
+                                if(GetConfig.main().getString("Lang").equals("It")){
+                                    sender.sendMessage(Prefix.get() + Messages.ConsoleIsNotAPlayer());
+                                }
+
+                                if(GetConfig.main().getString("Lang").equals("En")){
+                                    sender.sendMessage(Prefix.get() + Messages.ConsoleIsNotAPlayerEN());
+                                }
                             }
 
 
@@ -225,6 +237,8 @@ public class MacBans implements CommandExecutor {
                         p.sendMessage(Format.color("&4#&cBanna per indirizzo mac"));
                         p.sendMessage(Format.color("&4/&cmacbans unban &4<&cNomePlayer&4>&c"));
                         p.sendMessage(Format.color("&4#&cUnbanna per indirizzo mac"));
+                        p.sendMessage(Format.color("&4/&cmacbans list"));
+                        p.sendMessage(Format.color("&4#&cMostra lista giocatori online + mac"));
                         p.sendMessage(Format.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                     }
                     if(GetConfig.main().getString("Lang").equals("En")){
@@ -237,6 +251,8 @@ public class MacBans implements CommandExecutor {
                         p.sendMessage(Format.color("&4#&cBan for mac address"));
                         p.sendMessage(Format.color("&4/&cmacbans unban &4<&cPlayerName&4>&c"));
                         p.sendMessage(Format.color("&4#&cUnban for mac address"));
+                        p.sendMessage(Format.color("&4/&cmacbans list"));
+                        p.sendMessage(Format.color("&4#&cShow online players list + mac"));
                         p.sendMessage(Format.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                     }
                 } else {
@@ -377,6 +393,44 @@ public class MacBans implements CommandExecutor {
 
                             } catch (Exception ex){
                                 System.out.println("Error: " + ex.getMessage());
+                            }
+                        }
+                    } else {
+                        if(GetConfig.main().getString("Lang").equals("It")){
+                            p.sendMessage(Format.color(Prefix.get() + Messages.AccessDenied()));
+                        }
+
+                        if(GetConfig.main().getString("Lang").equals("En")){
+                            p.sendMessage(Format.color(Prefix.get() + Messages.AccessDeniedEN()));
+                        }
+                    }
+                }
+
+                if(args[0].equals("list")){
+                    if(p.hasPermission("MacBans.list")){
+
+
+                        Set keys = getJoinedPlayers.keySet();
+
+                        for(Object key : keys){ // TODO : ADDED MACBANS LIST
+
+                            if(GetConfig.main().getString("Lang").equals("It")){
+
+                                p.sendMessage(Format.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
+                                p.sendMessage(Format.color("&c&lLista Giocatori Online"));
+                                p.sendMessage("");
+                                p.sendMessage(Format.color("&4" + key.toString() + " &c&l➟ &4" + getJoinedPlayers.get(key).toString() + "\n"));
+                                p.sendMessage(Format.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
+
+
+                            }
+
+                            if(GetConfig.main().getString("Lang").equals("En")){
+                                p.sendMessage(Format.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
+                                p.sendMessage(Format.color("&c&lOnline Players List"));
+                                p.sendMessage("");
+                                p.sendMessage(Format.color("&4" + key.toString() + " &c&l➟ &4" + getJoinedPlayers.get(key).toString() + "\n"));
+                                p.sendMessage(Format.color("&c▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬"));
                             }
                         }
                     } else {
