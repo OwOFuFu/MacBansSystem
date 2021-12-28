@@ -13,7 +13,7 @@ import java.util.List;
 
 @SuppressWarnings("all")
 public class Tab_1_14_R1 implements TabCompleter {
-    private static final String[] COMMANDS = { "mac", "ban", "unban" };
+    private static final String[] COMMANDS = { "mac", "ban", "unban", "list" };
 
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
